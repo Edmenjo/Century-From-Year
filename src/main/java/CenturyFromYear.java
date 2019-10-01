@@ -5,6 +5,10 @@ public class CenturyFromYear {
     public CenturyFromYear() { }
 
     public int getCentury(int year){
-        return 0;
+        if(year <= 0){
+            return 0;
+        } else{
+            return year % 100 == 0 ? (year / 100) : (year / 100) + 1;
+        }
     }
 }
